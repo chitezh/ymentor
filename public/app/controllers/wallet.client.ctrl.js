@@ -15,7 +15,7 @@ angular.module('pairToLearnApp')
     var expertId = $window.sessionStorage.expert;
     $scope.showBookSession = true;
     if (!craftId && !expertId) {
-      $scope.showBookSession = false;
+      $scope.showBookSession = true;
     }
 
     $timeout(function() {

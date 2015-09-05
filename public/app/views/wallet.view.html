@@ -28,42 +28,5 @@
     </div>
   </div>
   <div class="col l5 s12 balance">
-    <div class="row center">
-      <h5>
-        Buy more P2L minutes
-      </h5>
-      <div class="divider"></div>
-    </div>
-    <form method='POST' action='https://voguepay.com/pay/' ng-init="minute = 0">
-      <input type='hidden' name='v_merchant_id' value='9802-0029872' />
-      <input type='hidden' name='merchant_ref' value='' />
-      <input type='hidden' name='memo' value='Pair to Learn minutes Purchase' />
-      <input type='hidden' name='notify_url' value='http://paritolearn.herokuapp.com/notification.php' />
-      <input type='hidden' name='success_url' value='http://paritolearn.herokuapp.com/wallet/success' />
-      <input type='hidden' name='fail_url' value='http://paritolearn.herokuapp.com/wallet/fail' />
-      <input type='hidden' name='developer_code' value='5587e3f9d8961' />
-      <input type='hidden' name='store_id' value='25' />
-      <div class="row">
-        <div class="input-field col s12">
-          <label for="minutes">Enter the number of minutes you want buy -&nbsp;<strike>N</strike>50/min</label>
-          <input id="minutes" type="text" ng-model="minute" class="validate" required>
-        </div>
-      </div>
-      <input name='total' id="amount" type="hidden" value="{{minute * 50}}">
-      <div class="row">
-        <div class="input-field col s12">
-          <label for="amount">Amount in Naira</label>
-          <p><strike>N</strike>{{50 * ((+minute>0) ? minute : 0)}}</p>
-          <div class="divider"></div>
-        </div>
-      </div>
-      <div class="row center">
-        <input type='submit' ng-disabled="minute === 0 || minute === '0' || minute === '' " class="btn waves-effect waves-light blue" value="Buy Now" alt='Buy Now' />
-      </div>
-    </form>
-    <div class="row center">
-      <img height="50" src="assets/images/prepardcards.png">
-      <img height="70" src="assets/images/guarantee.png">
-    </div>
   </div>
 </div>

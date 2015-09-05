@@ -3,12 +3,12 @@
 module.exports = {
   db: process.env.MONGOLAB_URI,
   google: {
-    consumerKey: '977184814514-r46c8hk427gvvr58mmaujkallc5mfmep.apps.googleusercontent.com',
-    consumerSecret: '3TmBJI4p6SlMVj3op484Lr63'
+    consumerKey: '904765489363-1d6sgdpf4vd6jee4lbtfo0i61h3rc4li.apps.googleusercontent.com',
+    consumerSecret: 'fiImCAQP0RfidEHjknK4FUSf'
   },
   facebook: {
-    clientID: '1451643985131503',
-    clientSecret: 'ab912e0bc9bf867f39e1c25ab0d1aac4'
+    clientID: '1655371418049551',
+    clientSecret: '7556b7f9886b33f1cf9af33fe62a4d8b'
   },
   jwtSecret: 'mySecret',
   cloudinary: {
