@@ -5,7 +5,7 @@
   <div class="section no-pad-bot">
     <div class="row center container">
       <h5 class="col s12 l10 light offset-l2">
-          Meet the {{oneCraft.title}} experts...
+          Meet the {{oneCraft.title}} Mentors...
         </h5>
     </div>
   </div>
@@ -13,14 +13,14 @@
 </div>
 <div class="row container offset-custom">
   <div class="col l8 center">
-    <h4 class="blue-grey-text" style="border-bottom: 1px solid rgb(150, 169, 178);padding-bottom: .4em;">Experts</h4 >
+    <h4 class="blue-grey-text" style="border-bottom: 1px solid rgb(150, 169, 178);padding-bottom: .4em;">Mentors</h4 >
     <div class="col s12 l4 center" ng-repeat="expert in oneCraft.experts">
-      <div class="card center">
+      <div class="card center" style="min-height:370px">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" ng-src="{{expert.picture}}">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">
+          <span class="card-title activator grey-text text-darken-4" style="font-size:18px">
           {{expert.firstname}}&nbsp;
           {{expert.lastname}}
           <i class="mdi-navigation-more-vert right"></i>
@@ -29,7 +29,7 @@
             <a href="" ng-click="saveCraftExpert(oneCraft._id, expert._id)">Connect..</a></p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{expert.firstname}}&nbsp;{{expert.lastname}}<i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4" style="font-size:18px">{{expert.firstname}}&nbsp;{{expert.lastname}}<i class="mdi-navigation-close right"></i></span>
           <p>{{expert.email}}</p>
         </div>
       </div>
