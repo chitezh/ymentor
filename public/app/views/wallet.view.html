@@ -2,31 +2,10 @@
   <div ng-include="'app/views/sidenav.view.html'"></div>
 </div>
 <div class="row container offset-custom" style="margin: 4em auto;">
-  <div class="col l5 s12 balance">
-    <!-- now working fine -->
-    <div class="row center">
-      <h5>
-        P2L Wallet Balance
-      </h5>
-      <div class="divider"></div>
-    </div>
-    <div class="center" ng-show="minutes">
-      <h1 class="wallet-minutes">
-    <span ng-class="(minutes < 1) ? 'red-text' : 'green-text'">{{minutes}}</span>
-    </h1>
-      <h3>
-        <span style=" color: rebeccapurple;">P2L</span>&nbsp;
-      </h3>
-      <h4 style="color: darkolivegreen;">minutes</h4>
-    </div>
+  <div class="col l12 s12 balance">
     <div class="divider"></div>
-    <div class="row center" ng-show="minutes > 0 && showBookSession" style="margin-top: 1em;">
+    <div class="row center" style="margin-top: 17em;">
       <a ng-href="/#/bookSession" class="btn waves-effect waves-light">Book a session</a>
     </div>
-    <div class="row center red-text" ng-hide="minutes > 0" style="margin-top: 1em;">
-      <h5>Insuffucient credit<br>Buy P2l minutes to continue</h5>
-    </div>
-  </div>
-  <div class="col l5 s12 balance">
   </div>
 </div>

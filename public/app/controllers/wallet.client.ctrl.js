@@ -11,7 +11,7 @@ angular.module('pairToLearnApp')
       });
     })(jQuery);
 
-    var craftId = $window.sessionStorage.craft;
+ /*   var craftId = $window.sessionStorage.craft;
     var expertId = $window.sessionStorage.expert;
     $scope.showBookSession = true;
     if (!craftId && !expertId) {
@@ -36,7 +36,7 @@ angular.module('pairToLearnApp')
       $scope.counter--;
       mytimeout = $timeout($scope.onTimeout, 1000);
     };
-
+*/
     $scope.bookMentorSession = function(userId, craftId, sessionData) {
       if (!sessionData.date) {
         return;

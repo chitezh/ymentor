@@ -1,43 +1,61 @@
 <div id="slide-out" class="side-nav fixed">
-  <div ng-include="'app/views/sidenav.view.html'"></div>
+    <div ng-include="'app/views/sidenav.view.html'"></div>
 </div>
 <div id="index-banner" class="parallax-container userParallax offset-custom" style="background-color: white; margin-top: .51em;">
-  <div class="section no-pad-bot">
-    <div id="signUp" class="SigninSignup" style="background-image: none !important;  width: 70% !important;">
-      <div style="background-color: rgb(38, 50, 56) !important; border-radius: 20px;">
-        <div class="row center">
-          <form name="bookSession" ng-submit="bookMentorSession(decodedToken.user._id, oneCraft._id, session)">
-            <div class="s12 m4 l8">
-              <h5 class="newCraft">Book Session</h5>
+    <div class="section no-pad-bot">
+        <div id="signUp" class="SigninSignup" style="background-image: none !important;  width: 70% !important;">
+            <div style="background-color: rgb(38, 50, 56) !important; border-radius: 20px;">
+                <div class="row center">
+                    <form name="bookSession" ng-submit="bookMentorSession(decodedToken.user._id, oneCraft._id, session)">
+                        <div class="s12 m4 l8">
+                            <h5 class="newCraft">Book Session</h5>
+                        </div>
+                        <div class="row no-marign-bottom">
+                            <div class="input-field col s6">
+                                <i class="medium mdi-social-public prefix"></i>
+                                <input type="text" class="datepicker" ng-model="session.date" min="{{Date.now()}}" required>
+                                <label for="icon_prefix">Date</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="medium mdi-action-description prefix"></i>
+                                <input ui-timepicker name="smartererimgname" id="icon_prefix" type="text" ng-model="session.time" required>
+                                <label for="icon_prefix">Time</label>
+                            </div>
+                        </div>
+                        <div class="row no-marign-bottom">
+                            <div class="input-field col s12">
+                                <select class="browser-default" style="
+    background-color: #263238;
+    margin: 20px 0;
+    border: 1px solid grey;
+    width: 90%;
+    color: grey;
+    margin: 0 auto;
+">
+                                    <option value="" disabled selected>Choose a location</option>
+                                    <option value="1">Andela</option>
+                                    <option value="2">CcHub</option>
+                                    <option value="3">IdeaHub</option>
+                                    <option value="4">Sweet Sensation</option>
+                                    <option value="5">E - Center</option>
+                                </select>
+                            </div>
+                            <div class="row no-marign-bottom">
+                                <div class="input-field col s12">
+                                    <i class="medium mdi-action-description prefix"></i>
+                                    <textarea id="icon_prefix" rows="2" class="materialize-textarea validate" max="350" ng-model="session.description" required></textarea>
+                                    <label for="icon_prefix">Message</label>
+                                </div>
+                            </div>
+                            <div class="row center no-margin-bottom">
+                                <div class="input-field center col s12">
+                                    <input id="create" type="submit" value="Confirm" class="waves-effect waves-light btn-facebook signup">
+                                    <!-- <a ng-href="#/user/{{decodedToken.user._id}}" id="create" class="waves-effect waves-light btn-facebook red center signup" style="line-height: 3em; width: 23em;">Cancel</a> -->
+                                </div>
+                            </div>
+                    </form>
+                    </div>
+                </div>
             </div>
-            <div class="row no-marign-bottom">
-              <div class="input-field col s6">
-                <i class="medium mdi-social-public prefix"></i>
-                <input type="text" class="datepicker" ng-model="session.date" min="{{Date.now()}}" required>
-                <label for="icon_prefix">Date</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="medium mdi-action-description prefix"></i>
-                <input ui-timepicker name="smartererimgname" id="icon_prefix" type="text" ng-model="session.time" required>
-                <label for="icon_prefix">Time</label>
-              </div>
-            </div>
-            <div class="row no-marign-bottom">
-              <div class="input-field col s12">
-                <i class="medium mdi-action-description prefix"></i>
-                <textarea id="icon_prefix" rows="2" class="materialize-textarea validate" max="350" ng-model="session.description" required></textarea>
-                <label for="icon_prefix">Message</label>
-              </div>
-            </div>
-            <div class="row center no-margin-bottom">
-              <div class="input-field center col s12">
-                <input id="create" type="submit" value="Confirm" class="waves-effect waves-light btn-facebook signup">
-                <!-- <a ng-href="#/user/{{decodedToken.user._id}}" id="create" class="waves-effect waves-light btn-facebook red center signup" style="line-height: 3em; width: 23em;">Cancel</a> -->
-              </div>
-            </div>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
-</div>
