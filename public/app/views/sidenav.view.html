@@ -1,0 +1,47 @@
+<span class="quickAccess">Quick Access</strong></span>
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header"><a ng-href="#/user/{{decodedToken.user._id}}/dashboard">Dashboard</a></div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a ng-href="#/user/{{decodedToken.user._id}}">View all crafts</a></div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a>My crafts</a></div>
+    <div class="collapsible-body">
+      <p><a href="#/mycrafts#completed">Completed crafts</a></p>
+    </div>
+    <div class="collapsible-body">
+      <p><a href="#/mycrafts#ongoing">Ongoing crafts</a></p>
+    </div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a href="#/post-craft">Add a Craft</a></div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a href="#/wallet/user/{{decodedToken.user._id}}
+">My Wallet</a></div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a href="">Favorites</a></div>
+  </li>
+  <div class="divider"></div>
+  <li>
+    <div class="collapsible-header"><a href="">Wish List</a></div>
+  </li>
+  <div class="divider"></div>
+</ul>
+<script type="text/javascript">
+(function($) {
+  $(function() {
+    $('.collapsible').collapsible({
+      accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
+})(jQuery);
+</script>

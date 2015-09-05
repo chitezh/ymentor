@@ -1,0 +1,51 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div id="index-banner" class="parallax-container offset-custom userParallax" style="background-color: white">
+  <div class="section no-pad-bot">
+    <div id="signUp" class="SigninSignup" style="background-image: none !important; margin-top: 1em; width: 70% !important;">
+      <div style="background-color: rgb(38, 50, 56) !important; border-radius: 20px;">
+        <div class="row center">
+          <form name="adminForm">
+            <div class="s12 m4 l8">
+              <h5 class="newCraft">Edit Craft</h5></div>
+            <div class="row no-marign-bottom">
+              <div class="input-field col s12">
+                <i class="medium mdi-social-public prefix"></i>
+                <input name="title" id="title" ng-model="craft.title" required type="text" class="validate">
+                <label for="icon_prefix">Craft title</label>
+              </div>
+            </div>
+            <div class="row no-marign-bottom">
+              <div class="input-field col s12">
+                <i class="medium mdi-action-description prefix"></i>
+                <textarea id="icon_prefix" rows="2" class="materialize-textarea validate" ng-model="craft.description" required></textarea>
+                <label for="icon_prefix">Description</label>
+              </div>
+            </div>
+            <!--   <div class="row no-marign-bottom">
+              <div class="input-field col s12">
+                <i class="medium mdi-action-description prefix"></i>
+                <input name="category" id="icon_prefix" type="text" ng-model="craft.category" class="validate" required>
+                <label for="icon_prefix">Category</label>
+              </div>
+            </div> -->
+            <div class="row l12 center no-margin-bottom">
+              <div class="btn blue-grey darken-1">
+                <input type="file" ngf-select="true" accept="image/*" ng-model="craft.picture" ngf-change="fileSelected($files, $event)" class="validate" required>
+              </div>
+            </div>
+            <label>Change the craft picture</label>
+        </div>
+        <div class="row center no-margin-bottom">
+          <div class="input-field col s12" id="buttons">
+            <input id="update" type="submit" ng-click="updateCraft(craft)" value="Update" class="waves-effect waves-light btn-facebook signup">
+            <input id="delete" type="submit" ng-click="deleteCraft()" value="Delete Craft" class="waves-effect waves-light btn-facebook signup delete red">
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

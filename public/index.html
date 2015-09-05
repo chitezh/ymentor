@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pairToLearnApp">
+
+<head>
+  <title>Ya-Mentor</title>
+  <meta name="viewport" width="device-width" content="initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/animate.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/firepad-user-list.css" />
+  <link rel='stylesheet' href='libs/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+  <link rel='stylesheet' href='libs/jquery-timepicker-jt/jquery.timepicker.css' type='text/css' media='all' />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
+  <!-- <base href="/"> -->
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <!-- CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.css" />
+  <!-- ACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+  <!-- Firepad -->
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.1.1/firepad.css" />
+  <script src="https://cdn.firebase.com/libs/firepad/1.1.1/firepad.min.js"></script>
+  <!-- Include example userlist script / CSS -->
+  <script src="libs/firepad/user-list.js"></script>
+</head>
+
+<body>
+  <div ng-include="'app/views/nav.view.html'"></div>
+  <div ng-view></div>
+  <div ng-include="'app/views/footer.view.html'"></div>
+  <!-- Scripts -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+  <script src="libs/typer/jquery.typer.js"></script>
+  <script src="libs/materialize/materialize.js"></script>
+  <script src="libs/materialize/init.js"></script>
+  <script src="libs/jquery-timepicker-jt/jquery.timepicker.js"></script>
+  <script type="text/javascript" src="libs/angular/angular.js"></script>
+  <!-- loading bar -->
+  <script type='text/javascript' src="libs/angular-jquery-timepicker/src/timepickerdirective.js"></script>
+  <script type='text/javascript' src='libs/angular-loading-bar/build/loading-bar.min.js'></script>
+  <script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="libs/ng-file-upload/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="libs/angular-messages/angular-messages.min.js"></script>
+  <script type="text/javascript" src="libs/angular-timer/dist/angular-timer.js"></script>
+  <script type="text/javascript" src="app/modules/app.js"></script>
+  <!-- filters -->
+  <script type="text/javascript" src="app/filters/slug.filter.js"></script>
+  <!-- services -->
+  <script type="text/javascript" src="app/services/user.client.service.js"></script>
+  <script type="text/javascript" src="app/services/craft.client.service.js"></script>
+  <script type="text/javascript" src="app/services/baseurl.client.service.js"></script>
+  <script type="text/javascript" src="app/services/session.client.service.js"></script>
+  <!-- controllers -->
+  <script type="text/javascript" src="app/controllers/navigation.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/sign.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/home.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/pair.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/user.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/craft.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/mycrafts.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/crud.craft.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/wallet.client.ctrl.js"></script>
+  <script type="text/javascript" src="app/controllers/expert.client.ctrl.js"></script>
+  <script>
+  'use strict';
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-63700639-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

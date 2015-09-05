@@ -1,0 +1,69 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div class="row container offset-custom" style="margin: 4em auto;">
+  <div class="col l5 s12 balance">
+    <!-- now working fine -->
+    <div class="row center">
+      <h5>
+        P2L Wallet Balance
+      </h5>
+      <div class="divider"></div>
+    </div>
+    <div class="center" ng-show="minutes">
+      <h1 class="wallet-minutes">
+    <span ng-class="(minutes < 1) ? 'red-text' : 'green-text'">{{minutes}}</span>
+    </h1>
+      <h3>
+        <span style=" color: rebeccapurple;">P2L</span>&nbsp;
+      </h3>
+      <h4 style="color: darkolivegreen;">minutes</h4>
+    </div>
+    <div class="divider"></div>
+    <div class="row center" ng-show="minutes > 0 && showBookSession" style="margin-top: 1em;">
+      <a ng-href="/#/bookSession" class="btn waves-effect waves-light">Book a session</a>
+    </div>
+    <div class="row center red-text" ng-hide="minutes > 0" style="margin-top: 1em;">
+      <h5>Insuffucient credit<br>Buy P2l minutes to continue</h5>
+    </div>
+  </div>
+  <div class="col l5 s12 balance">
+    <div class="row center">
+      <h5>
+        Buy more P2L minutes
+      </h5>
+      <div class="divider"></div>
+    </div>
+    <form method='POST' action='https://voguepay.com/pay/' ng-init="minute = 0">
+      <input type='hidden' name='v_merchant_id' value='9802-0029872' />
+      <input type='hidden' name='merchant_ref' value='' />
+      <input type='hidden' name='memo' value='Pair to Learn minutes Purchase' />
+      <input type='hidden' name='notify_url' value='http://paritolearn.herokuapp.com/notification.php' />
+      <input type='hidden' name='success_url' value='http://paritolearn.herokuapp.com/wallet/success' />
+      <input type='hidden' name='fail_url' value='http://paritolearn.herokuapp.com/wallet/fail' />
+      <input type='hidden' name='developer_code' value='5587e3f9d8961' />
+      <input type='hidden' name='store_id' value='25' />
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="minutes">Enter the number of minutes you want buy -&nbsp;<strike>N</strike>50/min</label>
+          <input id="minutes" type="text" ng-model="minute" class="validate" required>
+        </div>
+      </div>
+      <input name='total' id="amount" type="hidden" value="{{minute * 50}}">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="amount">Amount in Naira</label>
+          <p><strike>N</strike>{{50 * ((+minute>0) ? minute : 0)}}</p>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="row center">
+        <input type='submit' ng-disabled="minute === 0 || minute === '0' || minute === '' " class="btn waves-effect waves-light blue" value="Buy Now" alt='Buy Now' />
+      </div>
+    </form>
+    <div class="row center">
+      <img height="50" src="assets/images/prepardcards.png">
+      <img height="70" src="assets/images/guarantee.png">
+    </div>
+  </div>
+</div>

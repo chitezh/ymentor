@@ -1,0 +1,62 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div id="index-banner" class="parallax-container userParallax offset-custom" style="background-color: white; margin-top: .51em;">
+  <div class="section no-pad-bot">
+    <div id="signUp" class="SigninSignup" style="background-image: none !important;  width: 70% !important;">
+      <div style="background-color: rgb(38, 50, 56) !important; border-radius: 20px;">
+        <div class="row center">
+          <form name="adminForm" ng-submit="createCraft(craft)">
+            <div class="s12 m4 l8">
+              <h5 class="newCraft">Create New Craft</h5>
+            </div>
+            <div class="row no-marign-bottom">
+              <div class="input-field col s12">
+                <i class="medium mdi-social-public prefix"></i>
+                <input name="title" id="icon_prefix" type="text" ng-model="craft.title" ngMaxlength="13" class="validate" required>
+                <label for="icon_prefix">Craft title</label>
+              </div>
+              <!--   <div class="input-field col s6">
+                <i class="medium mdi-action-description prefix"></i>
+                <input name="category" id="icon_prefix" type="text" ng-model="craft.category" class="validate" required>
+                <label for="icon_prefix">Category</label>
+              </div> -->
+            </div>
+            <div class="row no-marign-bottom">
+              <div class="input-field col s12">
+                <i class="medium mdi-action-description prefix"></i>
+                <textarea id="icon_prefix" rows="2" class="materialize-textarea validate" max="350" ng-model="craft.description" required></textarea>
+                <label for="icon_prefix">Description</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col l6 s6">
+                <i class="medium mdi-action-description prefix"></i>
+                <input name="smartererlink" id="icon_prefix" type="text" ng-model="craft.smartererlink">
+                <label for="icon_prefix">Smarterer Link</label>
+              </div>
+              <div class="input-field col l6 s6">
+                <i class="medium mdi-action-description prefix"></i>
+                <input name="smartererimgname" id="icon_preffix" type="text" ng-model="craft.smartererimagelink">
+                <label for="icon_preffix">Smarterer Image link</label>
+              </div>
+            </div>
+            <div class="row l12 center">
+              <label>Upload a photo that represents the craft below</label>
+            </div>
+            <div class="row l12 center no-margin-bottom">
+              <div class="btn blue-grey darken-1">
+                <input type="file" ngf-select="true" accept="image/*" ng-model="craft.picture" ngf-change="fileSelected($files, $event)" class="validate">
+              </div>
+            </div>
+            <div class="row center no-margin-bottom">
+              <div class="input-field col s12">
+                <input id="create" type="submit" value="Create" class="waves-effect waves-light btn-facebook signup">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

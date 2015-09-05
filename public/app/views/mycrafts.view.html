@@ -1,0 +1,49 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div class="row container offset-custom">
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active black-text" href="#ongoing">Ongoing Crafts</a></li>
+        <li class="tab col s3"><a class="black-text" href="#completed">Completed Crafts</a></li>
+      </ul>
+    </div>
+    <div id="ongoing" class="col s12">
+      <div class="col s12 l12">
+        <ul class="collection">
+          <li class="collection-item avatar" ng-hide="'{{session.status}}' === 'completed'" ng-repeat="session in sessions" style="height: 10em;">
+            <img ng-src="{{session.craftData.picture}}" class="circle">
+            <span class="title">Session Id: &nbsp;{{session.sessionId}}</span>
+            <p>
+              Craft: &nbsp;{{session.craftData.title}}
+              <br> Description: &nbsp;{{session.craftData.description | limitTo: 10}}
+              <br> Status: &nbsp;<span>{{session.status}}</span>
+            </p>
+            <a href="#/user/pair/{{session.sessionId}}" class="secondary-content">Continue pairing</a>
+            <input type="checkbox" id="{{session.sessionId}}" ng-change="complete(session.sessionId)" ng-model="status" />
+            <label for="{{session.sessionId}}">mark as completed</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="completed" class="col s12">
+      <div class="col s12 l12">
+        <ul class="collection">
+          <li class="collection-item avatar" ng-show="'{{session.status}}' === 'completed' && '{{session.status}}' !== 'On Going'" ng-repeat="session in sessions" style="height: 10em;">
+            <img ng-src="{{session.craftData.picture}}" class="circle">
+            <span class="title">Session Id: &nbsp;{{session.sessionId}}</span>
+            <p>
+              Craft: &nbsp;{{session.craftData.title}}
+              <br> Description: &nbsp;{{session.craftData.description | limitTo: 10}}
+              <br> Status: &nbsp;<span>{{session.status}}</span>
+            </p>
+            <a href="#/user/pair/{{session.sessionId}}" class="secondary-content">Continue pairing</a>
+            <!-- <input type="checkbox" id="{{session.sessionId}}" ng-change="complete(session.sessionId)" ng-model="status" />
+            <label for="{{session.sessionId}}">unmark as completed</label> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

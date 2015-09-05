@@ -1,0 +1,556 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By chitech
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #fff;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #D3D3D3;
+}
+
+.parallax {
+  /*background-image: url(assets/images/landing_bg1.jpg);*/
+}
+
+.parallax-container {
+  min-height: 470px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+  background-color: rgba(0, 0, 0, 0.52);
+  padding-top: 4em
+}
+
+.action {
+    background-color: rgba(255, 255, 255, 0.77);
+    width: 50%;
+    border-radius: 2%
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.btn-custom a {
+  background-color: rgba(0, 0, 0, 0.80) !important;
+  margin-top: 3em;
+  border: 2px solid;
+  border-radius: .5em;
+  width: 18em;
+}
+
+.btn-custom a:hover {
+  background-color: white !important;
+  color: teal;
+  border-color: black;
+}
+
+.btn-subscribe a {
+  background-color: rgba(32, 134, 199, 1) !important;
+  border: 2px solid;
+  border-radius: .5em;
+  width: 18em;
+}
+
+.btn-subscribe a:hover {
+  background-color: white !important;
+  color: teal;
+  border-color: black;
+}
+
+.btn-custom2 a {
+  margin-top: 3em;
+  border-radius: 1em;
+  width: 28em;
+}
+
+.btn-custom2 a:hover {
+  background-color: white !important;
+  color: teal;
+  border-color: black;
+}
+
+.icon-custom {
+  border: 2px solid;
+  border-radius: 1em;
+  padding: 0.2em;
+}
+
+.modal-header {
+  padding: .5em;
+  background-color: rgb(94, 94, 94);
+  color: white;
+  margin-top: 0em;
+  padding-left: 3em;
+  width: 100% !important;
+  margin-bottom: 1.5em;
+}
+
+.modal-header a {
+  color: white !important;
+  text-transform: capitalize;
+}
+
+.tabs .indicator {
+  background-color: rgb(219, 219, 219) !important;
+  height: 4px !important;
+}
+
+.guarantee {
+  width: 15%;
+  text-align: center;
+  margin: 2em auto;
+}
+
+.btn-facebook {
+  background-color: rgba(59, 89, 152, 0);
+  height: 3em;
+  width: 26em;
+  padding: 1.4em 0.2em;
+  vertical-align: middle;
+  color: white;
+  border-radius: .5em;
+  border: 2px solid rgb(131, 131, 131);
+}
+
+.btn-facebook:hover {
+  background-color: #3B5998;
+  height: 3em;
+  width: 26em;
+  padding: 1.4em 0.2em;
+  vertical-align: middle;
+  color: white;
+  border-radius: .5em;
+  border: 0px solid black;
+}
+
+.btn-google {
+  background-color: rgba(59, 89, 152, 0);
+  height: 3em;
+  width: 26em;
+  padding: 1.4em 0.2em;
+  vertical-align: middle;
+  color: white;
+  border-radius: .5em;
+  border: 2px solid rgb(131, 131, 131);
+  margin-top: 1em;
+}
+
+.btn-google:hover {
+  background-color: #DF4A32;
+  height: 3em;
+  width: 26em;
+  padding: 1.4em 0.2em;
+  vertical-align: middle;
+  color: white;
+  border-radius: .5em;
+  border: 0px solid rgb(131, 131, 131);
+}
+
+.btn-logo {
+  float: left;
+  padding-left: 0.2em;
+  margin-top: -0.3em;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.modal {
+  background-image: url('../images/backgroundImage.jpg') !important;
+  background-size: cover !important;
+  width: 63% !important;
+  max-height: 90% !important;
+}
+
+.SigninSignup {
+  background-image: url('../images/backgroundImage.jpg') !important;
+  background-size: cover !important;
+  width: 53% !important;
+  max-height: 90% !important;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.SigninSignup input {
+  color: white;
+  padding-top: .5em;
+  height: 1.5em;
+  font-size: .9em;
+}
+
+.modal-content {
+  background-color: white;
+}
+
+.signinAlt {
+  margin-top: 1.5em;
+  color: white;
+}
+
+.shade {
+  background-color: rgba(58, 56, 56, 0.86) !important;
+  padding: 3em 1em 1em 1em;
+  border-radius: 16px;
+}
+
+.or {
+  width: 4em;
+  padding: .8em;
+  background-color: rgba(152, 151, 151, 1);
+  margin-top: -0.9em;
+  border-radius: 2px;
+}
+
+.line {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.42);
+}
+
+.center-custom {
+  margin: 0 auto;
+}
+
+.no-marign-bottom {
+  margin-bottom: 0px !important;
+}
+
+.side-nav {
+  margin-top: 4.4em;
+  height: 100% !important;
+}
+
+.side-nav.fixed {
+  margin-top: 4.0em;
+}
+
+.shade form {
+  margin: 0 16%;
+}
+
+.offset-custom {
+  margin-left: 17em !important;
+  width: 80%;
+  margin-top: 3em;
+  min-height: 25em;
+  /*padding: 0px .5em !important;*/
+}
+
+.card .usercard img {
+  height: 12em !important;
+}
+
+div[ng-message] {
+  color: rgb(190, 29, 29);
+}
+
+.userParallax {
+  padding-top: 0em !important;
+}
+
+.signup {
+  padding: 0em 0em !important;
+  height: 3em !important;
+  margin-bottom: 1em;
+}
+
+.nav-user {
+  width: 3em !important;
+  margin-top: .51em;
+  margin-left: 1em;
+}
+
+.quickAccess {
+  padding: 1em !important;
+  text-align: center;
+  background-color: rgb(38, 50, 56);
+  color: white;
+  display: block;
+}
+
+.dropdown-content li > a {
+  font-size: 0.8rem;
+  color: #263238;
+  padding: .5rem .5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .SigninSignup {
+    width: 98% !important;
+    max-height: 90% !important;
+  }
+  .shade form {
+    margin: 0;
+  }
+  .btn-facebook {
+    width: 100%;
+  }
+  .btn-facebook:hover {
+    width: 100%;
+  }
+  .btn-google {
+    width: 100%;
+  }
+  .btn-google:hover {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+  .offset-custom {
+    margin-left: auto !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  #toast-container {
+    top: 15%;
+  }
+  .toast {
+    background-color: rgb(48, 153, 25);
+    text-align: center;
+  }
+}
+
+.collapsible-body p {
+  margin: 0 0 0 4rem;
+  padding: .2rem;
+}
+
+.profile-pic {
+  margin: 0 auto;
+}
+
+.collect {
+  border: none;
+  border-left: 2px solid #e0e0e0;
+  border-right: 2px solid #e0e0e0;
+}
+
+.expertlist {
+  border: none;
+  height: 330px;
+  overflow-y: scroll;
+}
+
+.collection .collection-item {
+  border-bottom: none
+}
+
+.firepad {
+  width: 700px;
+  height: 450px !important;
+  background-color: #C9C9C9 !important;
+}
+
+.firepad-userlist-heading {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #c9c9c9;
+  margin: 0px !important;
+}
+
+.firepad-userlist-users {
+  position: relative !important;
+  padding: 5px !important;
+  margin: 10px 2px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.firepad-userlist-user {
+  margin: 20px 0 !important;
+  height: 50px !important;
+}
+
+.firepad-userlist-name-hint {
+  top: 32px;
+}
+
+.CodeMirror {
+  background-color: #F9F9F9 !important;
+}
+
+.powered-by-firepad {
+  display: none !important;
+}
+
+.adminpage {
+  background-color: white;
+  background-size: cover !important;
+  width: 53% !important;
+  max-height: 90% !important;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.adminpage .row {
+  margin-bottom: 0px !important;
+}
+
+.newCraft {
+  color: white;
+  text-align: center !important;
+  padding: 1em .1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn-createCraft {
+  background-color: #3B5998;
+  height: 3em;
+  width: 26em;
+  padding: 0.4em 0.2em;
+  vertical-align: middle;
+  color: white;
+  border-radius: .5em;
+  border: 0px solid black;
+  margin-bottom: 1em;
+}
+
+#icon_prefix {
+  color: white;
+}
+
+.ng-touched {
+  color: black;
+}
+
+.input-field .prefix {
+  color: white;
+}
+
+.input-field {
+  padding-top: 1.5em !important;
+  margin-top: 0em !important;
+}
+
+.ng-dirty {
+  color: black;
+}
+
+.upload {
+  padding-top: 10px;
+}
+
+textarea {
+  font: initial !important;
+}
+
+.collection .collection-item:nth-child(even) {
+  background-color: rgba(244, 244, 244, 0.32);
+  ;
+}
+
+.wallet-hours {
+  margin-top: .51em;
+  font-size: 9em;
+  margin-bottom: .5em;
+  color: rgb(76, 175, 80);
+}
+
+.wallet-form {
+  border: 2px solid rgba(38, 50, 56, 0.05);
+  padding: 2em !important;
+  border-radius: 14px;
+  margin-left: 70px;
+}
+
+nav ul li {
+  display: inline-block !important;
+}
+
+input[type="button"] {
+  background-color: green !important;
+}
+
+.row .col.l5 {
+  width: 41.66667%;
+  margin-left: 70px;
+}
+
+.balance {
+  border: 2px solid rgba(38, 50, 56, 0.05);
+  /*padding: 2em !important;*/
+  
+  border-radius: 14px;
+  height: 509.125px;
+}
+
+.viewCrafts {
+  color: white;
+}
+
+#update {
+  margin-bottom: 23px;
+}
+
+#icon_prefix {
+  font-style: normal !important;
+}
+
+#dashboard {
+  margin-left: 15em !important;
+}
+
+#buttons {
+  margin-bottom: 8px;
+}
+
+.ui-timepicker-wrapper {
+  line-height: 20px !important;
+  width: 80%;
+}
+
+input,
+textarea {
+  font-family: monospace !important;
+}
+
+.search {
+  margin-bottom: 2em;
+}
+
+.search-bar {
+  padding-top: 0em !important;
+  margin-top: -1em !important;
+/*>>>>>> done*/
+}

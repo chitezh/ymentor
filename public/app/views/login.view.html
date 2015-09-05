@@ -1,0 +1,46 @@
+<div id="index-banner" class="parallax-container white userParallax">
+  <div class="section no-pad-bot">
+    <div id="signIn" class="SigninSignup">
+      <div class="shade">
+        <div class="row center">
+          <div>
+            <a ng-href="/auth/facebook" class="waves-effect waves-light btn-facebook"><span class="btn-logo"><img src="assets/images/facebook.svg"></span>Sign in with facebook</a>
+          </div>
+          <div>
+            <a ng-href="/auth/google?state=" class="waves-effect waves-light btn-google"><span class="btn-logo"><img src="assets/images/google-plus.svg"></span>Sign in with google</a>
+          </div>
+        </div>
+        <div class="line no-marign-bottom"></div>
+        <div class="or row center no-marign-bottom">OR</div>
+        <div class="row center no-marign-bottom">
+          <form name="signupForm" class="col l12 s12 form" action="/login" method="post">
+            <div class="row center no-marign-bottom">
+              <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email Address</label>
+              </div>
+            </div>
+            <div class="row center no-marign-bottom">
+              <div class="input-field col s12">
+                <input id="password" type="password" name="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row center no-marign-bottom">
+              <div class="input-field col s12">
+                <input id="signin" type="submit" ng-disabled="signupForm.$invalid" value="Sign In" class="waves-effect waves-light btn-facebook signup">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row center signinAlt">
+          <span>Don't have an account?</span> &nbsp;
+          <a href="#/signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax">
+  </div>
+</div>
+</div>

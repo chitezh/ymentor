@@ -1,0 +1,31 @@
+<div class="row container" style="margin-top: 2em;">
+  <nav class="search">
+    <div class="nav-w rapper white">
+      <form>
+        <div class="input-field search-bar">
+          <input id="search" ng-model="search" type="search" required>
+          <label for="search"><i class="material-icons grey-text ">search</i></label>
+          <i class="material-icons"></i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="col s12 l4" ng-repeat="craft in allCrafts | filter: search">
+    <div class="card" style="min-height: 24em;">
+      <div class="card-image usercard
+ waves-effect waves-block waves-light">
+        <img class="activator" ng-src="{{craft.picture}}">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{craft.title}}<i class="mdi-navigation-more-vert right"></i></span>
+        <p><a ng-href="#/user/auth-user">Start Learning now!</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{craft.title}}<i class="mdi-navigation-close right"></i></span>
+        <div ng-show="craft.createdBy" style="border-bottom: 1px solid rgb(226, 226, 226);padding-bottom: 10px;">Added By: <span>{{craft.createdBy}}</span></div>
+        <p>
+          {{craft.description | limitTo: 150}}...</p>
+      </div>
+    </div>
+  </div>
+</div>

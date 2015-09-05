@@ -1,0 +1,64 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<!-- now working -->
+<div id="index-banner" class="parallax-container userParallax offset-custom" style="background-color: white">
+  <div class="section no-pad-bot">
+    <div id="signUp" class="SigninSignup" style="background-image: none !important; margin-top: 2em; width: 70% !important;
+">
+      <div class="shade" style="background-color: rgb(38, 50, 56) !important;">
+        <div class="row center">
+          <form name class="col l12 s12 form">
+            <div class="row center no-marign-bottom">
+              <div class="input-field col s6">
+                <input name="firstname" id="firstname" ng-model="decodedToken.user.firstname" required type="text" class="validate">
+                <label for="firstname">First Name</label>
+                <div ng-messages="editprofileForm.firstname.$error">
+                </div>
+              </div>
+              <div class="input-field col s6">
+                <input name="lastname" id="lastname" ng-model="decodedToken.user.lastname" type="text" required class="validate">
+                <label for="lastname">Last Name</label>
+                <div ng-messages="editprofileForm.firstname.$error">
+                </div>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="input-field col s12">
+                <input name="email" id="email" ng-model="decodedToken.user.email" type="email" required class="validate">
+                <label for="email">Email Address</label>
+                <div ng-messages="editprofileForm.email.$error">
+                  <div ng-message="email">Type in a valid email address</div>
+                </div>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="input-field col s12">
+                <input name="password" id="password" ng-model="decodedToken.user.password" type="password" required class="validate">
+                <label for="password">Password</label>
+                <div ng-messages="editprofileForm.password.$error">
+                </div>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="input-field col s12">
+                <input name="phonenumber" id="phonenumber" ng-model="decodedToken.user.phonenumber" type="text" required class="validate">
+                <label for="password">Phone Number</label>
+                <div ng-messages="editprofileForm.password.$error">
+                </div>
+              </div>
+            </div>
+            <div class="row center no-marign-bottom">
+              <div class="input-field col s12">
+                <input id="user/:firstname" type="submit" ng-click="editProfile()" value="Update" class="waves-effect waves-light btn-facebook signup">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="parallax">
+      <img src="assets/images/landing_bg.jpg">
+    </div>
+  </div>
+</div>

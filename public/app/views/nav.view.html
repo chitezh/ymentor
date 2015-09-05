@@ -1,0 +1,66 @@
+<div class="navbar-fixed">
+  <!-- Dropdown Structure -->
+  <ul id="user-menu" class="dropdown-content blue-text">
+    <li><a ng-href="#/user/{{decodedToken.user._id}}">View Crafts</a></li>
+    <li><a ng-href="#/user/{{decodedToken.user._id}}/dashboard">Dashboard</a></li>
+    <li><a ng-href="#/edit/user/{{decodedToken.user._id}}">Edit Profile</a></li>
+    <li class="divider"></li>
+    <li><a ng-click="logout()">Log Out</a></li>
+  </ul>
+  <nav class="blue-grey darken-4" role="navigation" ng-controller="NavCtrl">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#/" class="brand-logo" style="display: inline-flex;"><img src="assets/images/p2l_logo.png" style="height: 2em;">&nbsp;Ya-Mentor</a>
+      <ul class="right hide-on-med-and-down white-text">
+        <li><a ng-hide="isLoggedIn" href="#/crafts">See what you can learn</a></li>
+        <li><a ng-hide="hideFeatures" href="#features">Features</a></li>
+        <li><a ng-hide="isLoggedIn" href="#/signup" style="display: inline;">Connect with a mentor</a></li>
+        <li><a ng-hide="isLoggedIn" href="#/login" class="btn blue-grey darken-1">Login</a></li>
+        <div ng-show="isLoggedIn" style="display: inline;">
+          <li>
+            <span style="display: inline-block;">Welcome {{decodedToken.user.firstname}}</span>
+          </li>
+          <li>
+            <img ng-hide="decodedToken.user.picture" ng-src="../assets/images/UserImage.png" alt="" class="nav-user circle responsive-img">
+            <img ng-show="decodedToken.user.picture" ng-src="{{decodedToken.user.picture}}" alt="" class="nav-user circle responsive-img">
+          </li>
+          <li>
+            <a class="dropdown-button" href="#!" data-activates="user-menu">
+              <i class="mdi-navigation-more-vert"></i>
+            </a>
+          </li>
+        </div>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a ng-hide="hideFeatures" href="#features">Features</a></li>
+        <li><a ng-hide="isLoggedIn" href="#/signup">Pair with an Expert</a></li>
+        <li><a ng-hide="isLoggedIn" href="#/login">Login</a></li>
+        <div ng-show="isLoggedIn">
+          <li>
+            <a class="center" ng-show="isLoggedIn">
+              <span>{{decodedToken.user.firstname}}</span>
+            </a>
+          </li>
+          <li>
+            <center>
+              <img ng-hide="decodedToken.user.picture" ng-src="../assets/images/UserImage.png" alt="" class="nav-user circle responsive-img">
+              <img ng-show="decodedToken.user.picture" ng-src="{{decodedToken.user.picture}}" alt="" class="nav-user circle responsive-img">
+            </center>
+          </li>
+          <div class="divider"></div>
+          <li><a ng-href="#/user/{{decodedToken.user._id}}">See what you can learn</a></li>
+          <li><a ng-href="#/user/{{decodedToken.user._id}}/dashboard">Dashboard</a></li>
+          <li><a ng-href="#/edit/user/{{decodedToken.user._id}}">Edit Profile</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">View all crafts</a></li>
+          <li><a href="#!">Crafts learnt</a></li>
+          <li><a href="#!">Connections</a></li>
+          <li><a href="#!">Favorites</a></li>
+          <li class="divider"></li>
+          <li><a ng-click="logout()">Log Out</a></li>
+          <li class="divider"></li>
+        </div>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+</div>

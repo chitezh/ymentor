@@ -1,0 +1,94 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div class="parallax-container valign-wrapper" style="min-height: 50px !important; height: 90px;;padding-top: 2em !important;">
+  <div class="section no-pad-bot">
+    <div class="row center container">
+      <h4 class="col s12 l10 light offset-l2">
+         {{currentUser.firstname}}&nbsp;{{currentUser.lastname}}'s Dashboard
+        </h4>
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/images/joshdrewpairing.jpg" alt="Unsplashed background img 2"></div>
+</div>
+<div class="row container offset-custom">
+  <div class="col l4 s12 center">
+    <form name='profileForm' enctype="multipart/form-data">
+      <a ng-href="#/edit/user/{{currentUser._id}}" class="secondary-content"><i class="mdi-action-grade"></i></a>
+      <img width="250" ng-hide="currentUser.picture" ng-src="assets/images/placeholder-avatar.png" alt="" class="  circle responsive-img">
+      <img width="250" ng-show="currentUser.picture" ng-src="{{currentUser.picture}}" alt="" class=" circle responsive-img">
+      <label>Upload your profile picture.</label>
+      <div class="row center">
+        <input style="width: 200px" type="file" ngf-select="true" ng-model="image" ngf-change="fileSelected($files, $event)" />
+        <a ng-disabled="profileForm.$invalid" ng-click="addProfilePic(image)" id="submitimage" class="btn waves-effect waves-light green" style="
+          height: 20px;
+          font-size: 10px;
+          line-height: 18px;
+          width: 70px;
+          padding: 2px;
+        " ng-controller="UserCtrl">upload</a>
+      </div>
+    </form>
+  </div>
+  <div class="col l4 s12">
+    <ul class="collection collect">
+      <li class="collection-item avatar">
+        <i class="mdi-action-account-circle circle green"></i>
+        <span class="title">First Name:</span>
+        <p>
+          {{currentUser.firstname}}
+        </p>
+      </li>
+      <li class="collection-item avatar">
+        <i class="mdi-action-account-circle circle green"></i>
+        <span class="title">Last Name:</span>
+        <p>
+          {{currentUser.lastname}}
+        </p>
+      </li>
+      <li class="collection-item avatar">
+        <i class="mdi-communication-call circle red"></i>
+        <span class="title">Phone:</span>
+        <p>
+          {{currentUser.phonenumber}}
+        </p>
+      </li>
+      <li class="collection-item avatar">
+        <i class="mdi-communication-email circle red"></i>
+        <span class="title">Email:</span>
+        <p>
+          {{currentUser.email}}
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="col l4 s12">
+    <ul class="collection with-header expertlist">
+      <li class="collection-header center">
+        <h5>Expert</h5>
+      </li>
+      <li class="collection-item" ng-repeat="craft in expertCrafts">
+        <div>{{craft.title}}<a ng-href="#/user/{{currentUser._id}}/craft/{{craft._id}}" class="secondary-content"><i class="mdi-content-send"></i></a></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="row center" id="dashboard">
+    <a ng-href="#/edit/user/{{currentUser._id}}" id="download-button" class="btn waves-effect waves-light">Edit Profile</a>
+    <a ng-href="#/user/{{currentUser._id}}/apply/expert" id="download-button" class="btn waves-effect waves-light">Apply as an Expert</a>
+    <a ng-href="#/post-craft" id="download-button" class="btn waves-effect waves-light">Add a craft</a>
+    <a ng-href="#/admin/crafts" id="download-button" class="btn waves-effect waves-light">View my posted crafts</a>
+    <a id="download-button" class="btn waves-effect waves-light red modal-trigger" href="#modal1">Delete profile</a>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Confirm Delete</h4>
+      <p>Are you sure you want to delete your account?</p>
+    </div>
+    <div class="modal-footer">
+      <a ng-click="deleteProfile()" class=" modal-action modal-close waves-effect waves-red btn-flat">Delete</a>
+      <a ng-click="$('#modal1').closeModal()" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+</div>

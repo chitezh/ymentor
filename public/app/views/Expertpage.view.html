@@ -1,0 +1,52 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div class="parallax-container valign-wrapper" style="min-height: 50px !important;padding-top: 2em !important;">
+  <div class="section no-pad-bot">
+    <div class="row center container">
+      <h5 class="col s12 l10 light offset-l2">
+          Meet the {{oneCraft.title}} experts...
+        </h5>
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/images/joshdrewpairing.jpg" alt="Unsplashed background img 2"></div>
+</div>
+<div class="row container offset-custom">
+  <div class="col l8 center">
+    <h4 class="blue-grey-text" style="border-bottom: 1px solid rgb(150, 169, 178);padding-bottom: .4em;">Experts</h4 >
+    <div class="col s12 l4 center" ng-repeat="expert in oneCraft.experts">
+      <div class="card center">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" ng-src="{{expert.picture}}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+          {{expert.firstname}}&nbsp;
+          {{expert.lastname}}
+          <i class="mdi-navigation-more-vert right"></i>
+          </span>
+          <p>
+            <a href="" ng-click="saveCraftExpert(oneCraft._id, expert._id)">Connect..</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{expert.firstname}}&nbsp;{{expert.lastname}}<i class="mdi-navigation-close right"></i></span>
+          <p>{{expert.email}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col l4 s12 m12">
+    <div class="card">
+      <div class="card-content center row l12">
+        <strong><span>Description</span></strong>
+        <p>{{oneCraft.description| limitTo: 350}}.</p>
+        <span ng-show="craft.createdBy">Added By:
+          <span>{{oneCraft.createdBy}}</span>
+        </span>
+      </div>
+      <div class="card-image col s12 l12">
+        <img ng-src="{{oneCraft.picture}}">
+      </div>
+    </div>
+  </div>
+</div>

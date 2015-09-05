@@ -1,0 +1,25 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<div class="row container offset-custom">
+  <div class="col s12 l12">
+    <ul class="collection">
+      <li class="collection-item avatar" style="height: 8em" ng-repeat="item in allCrafts">
+        <img ng-src="{{item.picture}}" alt="" class="circle">
+        <span class="title">{{item.title}}</span>
+        <p>{{item.description | limitTo: 80}}
+        </p>
+        <button class="btn waves-effect waves-light" ng-click="applyAsExpert(item._id)">Apply</button>
+        <div class="row secondary-content s12">
+          <a ng-show="item.smartererlink" ng-href="//{{item.smartererlink}}" class="smarterer_test_link ">
+            <img height="90" ng-src="//{{item.smartererimagelink}}" alt="" />
+          </a>
+          <a ng-hide="item.smartererlink" href="//smarterer.com/tests/technical-aptitude/run?wuid=ngjhngm1yt" class="smarterer_test_link">
+            <img height="90" src="//smarterer.com/images/test-widget/adu/rect/technical-aptitude.png" alt="" />
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="//smarterer.com/js/popup.js"></script>

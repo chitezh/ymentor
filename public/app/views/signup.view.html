@@ -1,0 +1,71 @@
+<div id="index-banner" class="parallax-container white userParallax">
+  <div class="section no-pad-bot">
+      <!-- Sign up structure -->
+      <div id="signUp" class="SigninSignup">
+        <div class="shade">
+          <div class="row center">
+            <div>
+              <a ng-href="/auth/facebook" class="waves-effect waves-light btn-facebook"><span class="btn-logo"><img src="assets/images/facebook.svg"></span>Sign in with facebook</a>
+            </div>
+            <div>
+              <a ng-href="/auth/google" class="waves-effect waves-light btn-google"><span class="btn-logo"><img src="assets/images/google-plus.svg"></span>Sign in with google</a>
+            </div>
+          </div>
+          <div class="line no-marign-bottom"></div>
+          <div class="or row center no-marign-bottom">OR</div>
+          <div class="row center no-marign-bottom">
+            <form name="signupForm" class="col l12 s12 form" action="/signup" method="post">
+              <div class="row center no-marign-bottom">
+                <div class="input-field col s6">
+                  <input name="firstname" id="firstname" required type="text" class="validate">
+                  <label for="firstname">First Name</label>
+                    <div ng-messages="signupForm.firstname.$error">
+                      <div align="left" ng-message="required">*</div>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                  <input name="lastname" id="lastname" type="text"  required class="validate">
+                  <label for="lastname">Last Name</label>
+                    <div ng-messages="signupForm.firstname.$error">
+                      <div align="left" ng-message="required">*</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row center no-marign-bottom">
+                <div class="input-field col s12">
+                  <input name="email" id="email" type="email" required class="validate">
+                  <label for="email">Email Address</label>
+                   <div ng-messages="signupForm.email.$error">
+                    <div align="left" ng-message="required">*</div>
+                    <div ng-message="email">Type in a valid email address</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row center no-marign-bottom">
+                <div class="input-field col s12">
+                  <input name="password" id="password" type="password" required class="validate">
+                  <label for="password">Password</label>
+                    <div ng-messages="signupForm.password.$error">
+                      <div align="left" ng-message="required">*</div>
+                    </div>
+                </div>
+              </div> 
+              <div class="row center no-marign-bottom">
+                <div class="input-field col s12">
+                  <input id="signup" type="submit" ng-disabled="signupForm.$invalid" value="Sign Up" class="waves-effect waves-light btn-facebook signup">
+                </div>
+              </div> 
+            </form>
+          </div>
+
+          <div class="row center signinAlt">
+            <span>Already have an account?</span>
+            &nbsp;
+            <a href="#/login">Sign in</a>
+          </div>
+        </div>
+      </div>
+    <div class="parallax">
+    </div>
+  </div>
+</div>

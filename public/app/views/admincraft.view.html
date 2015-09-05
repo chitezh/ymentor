@@ -1,0 +1,44 @@
+<div id="slide-out" class="side-nav fixed">
+  <div ng-include="'app/views/sidenav.view.html'"></div>
+</div>
+<<<<<<< HEAD
+<div class="row container offset-custom" style="margin-top: 2em;">
+   <nav class="search">
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" ng-model="search" type="search" required>
+          <label for="search" ><i class="material-icons"></i></label>
+=======
+<div class="row container offset-custom" style="margin-top: 2em; min-height: 200px">
+  <nav class="search">
+    <div class="nav-wrapper white">
+      <form>
+        <div class="input-field search-bar">
+          <input id="search" ng-model="search" type="search" required>
+          <label for="search"><i class="material-icons grey-text ">search</i></label>
+>>>>>>> done
+          <i class="material-icons"></i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="col s12 l4" ng-repeat="craft in expertCrafts | filter:search">
+    <div class="card">
+      <div class="card-image usercard
+ waves-effect waves-block waves-light">
+        <img class="activator" ng-src="{{craft.picture}}">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{craft.title}}<i class="mdi-navigation-more-vert right"></i></span>
+        <p><a href="#/edit/craft/{{craft._id}}" ng-cl>Edit Craft</a>&nbsp;<a class="right red-text" ng-controller="CRUDCraftCtrl" ng-click="deleteCraft()" href="" ng-cl>Delete Craft</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{craft.title}}<i class="mdi-navigation-close right"></i></span>
+        <div ng-show="craft.createdBy" style="border-bottom: 1px solid rgb(226, 226, 226);padding-bottom: 10px;">Added By: <span>{{craft.createdBy}}</span></div>
+        <p>
+          {{craft.description | limitTo: 150}}</p>
+      </div>
+    </div>
+  </div>
+</div>
